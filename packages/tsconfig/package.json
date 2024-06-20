@@ -1,0 +1,10 @@
+{
+  "name": "@nexusops-ui/tsconfig",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "tsconfig for Nexus Ops",
+  "author": "nexuer (https://github.com/nexuer)",
+  "files": [
+    "base.json"
+  ]
+}

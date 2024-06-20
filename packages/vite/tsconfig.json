@@ -1,0 +1,4 @@
+{
+  "extends": "@nexusops-ui/tsconfig/base.json",
+  "include": ["src"]
+}

@@ -1,0 +1,19 @@
+{
+  "extends": "@nexusops-ui/tsconfig/base.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "baseUrl": ".",
+    "module": "esnext",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "src",
+    "vite.config.ts"
+  ]
+}

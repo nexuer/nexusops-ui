@@ -1,0 +1,1 @@
+export const LOCALES_STORE_KEY = "LOCALES__STORE__KEY";

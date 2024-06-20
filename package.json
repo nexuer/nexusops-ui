@@ -1,0 +1,40 @@
+{
+  "name": "nexusops-ui",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "NexusOps UI",
+  "author": "nexuer (https://github.com/nexuer)",
+  "keywords": [
+    "nexusops-ui",
+    "nexusops"
+  ],
+  "main": "src/main.ts",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "clean": "rimraf --glob **/node_modules **/dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.13.1"
+  },
+  "devDependencies": {
+    "@kirklin/eslint-config": "^2.4.0",
+    "@nexusops-ui/tsconfig": "workspace:*",
+    "@nexusops-ui/vite": "workspace:*",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^9.5.0",
+    "prettier": "^3.3.2",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "unplugin-auto-import": "^0.17.6"
+  }
+}
