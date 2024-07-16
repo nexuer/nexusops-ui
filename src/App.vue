@@ -1,7 +1,13 @@
 <script lang="ts" setup>
-const { t, te } = useI18n();
+import { logger } from "@nexuer/utils";
+
+logger.info("NexusOps UI Ready!  ⸜(๑'ᵕ'๑)⸝⋆*");
 </script>
 
 <template>
-  <div>{{ t("hello") }}</div>
+  <NConfigProvider class="wh-full">
+    <NaiveProvider>
+      <RouterView />
+    </NaiveProvider>
+  </NConfigProvider>
 </template>

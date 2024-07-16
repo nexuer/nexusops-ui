@@ -1,9 +1,0 @@
-{
-  "extends": "@nexusops-ui/tsconfig/base.json",
-  "compilerOptions": {
-    "target": "esnext",
-    "baseUrl": ".",
-    "module": "esnext"
-  },
-  "include": ["src"]
-}

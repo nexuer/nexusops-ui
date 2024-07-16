@@ -1,5 +1,5 @@
 {
-  "extends": "@nexusops-ui/tsconfig/base.json",
+  "extends": "@nexuer/tsconfig/base.json",
   "compilerOptions": {
     "target": "esnext",
     "lib": ["dom", "esnext"],
@@ -13,7 +13,9 @@
     ]
   },
   "include": [
-    "src",
-    "vite.config.ts"
+    "./**/*.ts",
+    "./**/*.mts",
+    "./**/*.tsx",
+    "./**/*.vue"
   ]
 }

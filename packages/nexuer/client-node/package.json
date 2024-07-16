@@ -1,0 +1,33 @@
+{
+  "name": "@nexuer/client-node",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "NodeJS client for NexusOps",
+  "author": "nexuer (https://github.com/nexuer)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nexuer/client-node.git"
+  },
+  "keywords": [
+    "NexusOps",
+    "nexusops",
+    "client"
+  ],
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && unbuild"
+  },
+  "dependencies": {
+    "long": "^5.2.3",
+    "protobufjs": "^7.3.2"
+  },
+  "devDependencies": {
+    "commander": "^12.1.0",
+    "protobufjs-cli": "^1.1.2",
+    "rimraf": "^5.0.9",
+    "typescript": "^5.5.3",
+    "unbuild": "^2.0.0"
+  }
+}

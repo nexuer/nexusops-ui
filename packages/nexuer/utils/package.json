@@ -1,0 +1,15 @@
+{
+  "name": "@nexuer/utils",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "utils for nexuer",
+  "author": "nexuer (https://github.com/nexuer)",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@kirklin/logger": "^0.0.2",
+    "dayjs": "^1.11.11",
+    "lodash-es": "^4.17.21"
+  }
+}

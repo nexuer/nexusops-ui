@@ -1,0 +1,10 @@
+{
+  "name": "@nexuer/tsconfig",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "tsconfig for nexuer",
+  "author": "nexuer (https://github.com/nexuer)",
+  "files": [
+    "base.json"
+  ]
+}

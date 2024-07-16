@@ -1,0 +1,28 @@
+{
+  "extends": "@nexuer/tsconfig/base.json",
+  "compilerOptions": {
+    "target": "es2019",
+    "lib": ["es2020"],
+    "noLib": false,
+    "rootDir": "src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "declarationDir": "dist",
+    "importHelpers": true,
+    "outDir": "dist",
+    "removeComments": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "src/*_test.ts",
+    "dist"
+  ]
+}
