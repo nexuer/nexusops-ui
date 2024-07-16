@@ -1,6 +1,4 @@
 import type { RouteRecordRaw } from "vue-router";
-import { layouts, views } from "../transform/imports";
-import { transformRoutesToVueRoutes } from "../transform/transform";
 
 export const ROOT_ROUTE: RouteRecordRaw = {
   name: "root",
@@ -15,7 +13,7 @@ export const LoginRoute: RouteRecordRaw = {
   name: "login",
   component: () => import("~/views/_builtin/login/index.vue"),
   meta: {
-    title: "Login",
+    title: "login",
   },
 };
 
