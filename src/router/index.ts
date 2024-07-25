@@ -8,7 +8,7 @@ import {
 } from "vue-router";
 
 import { setupRouterGuard } from "./guard";
-import { builtinRoutes } from "./routes/builtin";
+import { basicRoutes } from "./routes";
 
 const { VITE_ROUTER_HISTORY_MODE = "hash", VITE_PUBLIC_PATH } = import.meta.env;
 
@@ -20,7 +20,7 @@ const historyCreator: Record<Env.RouterHistoryMode, (base?: string) => RouterHis
 
 const router = createRouter({
   history: historyCreator[VITE_ROUTER_HISTORY_MODE](VITE_PUBLIC_PATH),
-  routes: builtinRoutes,
+  routes: basicRoutes,
   strict: true,
 });
 

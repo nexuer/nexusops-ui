@@ -8,13 +8,13 @@ import type { Codec, Encryption } from "@nexuer/utils";
  *
  * @param pinia Pinia instance Pinia
  */
-export function registerPiniaPersistPlugin(pinia: Pinia, cfg: Config.DeveloperConfigurable) {
+export function registerPiniaPersistPlugin(pinia: Pinia, cfg: Setting.System) {
   pinia.use(createPersistedState(
     createPersistedStateOptions(cfg),
   ));
 }
 
-export function createPersistedStateOptions(cfg: Config.DeveloperConfigurable): PersistedStateFactoryOptions {
+export function createPersistedStateOptions(cfg: Setting.System): PersistedStateFactoryOptions {
   return {
     storage: localStorage,
     key: id => `${cfg.prefix}__${id}`,
@@ -33,20 +33,20 @@ function customSerializer(codec: Codec, enc: Encryption | null): Serializer {
     return {
       deserialize: (value) => {
         const decrypted = enc.decrypt(value);
-        return codec.Unmarshal(decrypted);
+        return codec.unmarshal(decrypted);
       },
       serialize: (value) => {
-        const serialized = codec.Marshal(value);
+        const serialized = codec.marshal(value);
         return enc.encrypt(serialized);
       },
     };
   } else {
     return {
       deserialize: (value) => {
-        return codec.Unmarshal(value);
+        return codec.unmarshal(value);
       },
       serialize: (value) => {
-        return codec.Marshal(value);
+        return codec.marshal(value);
       },
     };
   }

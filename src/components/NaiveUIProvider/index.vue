@@ -2,7 +2,7 @@
 import { createTextVNode } from "vue";
 
 defineOptions({
-  name: "AppProvider",
+  name: "NaiveUIProvider",
 });
 
 const ContextHolder = defineComponent({

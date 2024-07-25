@@ -2,11 +2,8 @@ import type { App } from "vue";
 import { createPinia } from "pinia";
 import { registerPiniaPersistPlugin } from "./plugins";
 
-const store = createPinia();
-
-export function setupStore(app: App, cfg: Config.Config) {
-  registerPiniaPersistPlugin(store, cfg.developerConfigurable);
+export function setupStore(app: App, setting: Setting.System) {
+  const store = createPinia();
+  registerPiniaPersistPlugin(store, setting);
   app.use(store);
 }
-
-export { store };

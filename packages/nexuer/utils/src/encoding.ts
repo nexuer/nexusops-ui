@@ -1,8 +1,8 @@
 import destr from "destr";
 
 export interface Codec {
-  Marshal: (value: any) => string;
-  Unmarshal: (text: string) => any;
+  marshal: (value: any) => string;
+  unmarshal: (text: string) => any;
 }
 
 class Json implements Codec {
@@ -18,11 +18,11 @@ class Json implements Codec {
     return Json.instance;
   }
 
-  Marshal(value: any): string {
+  marshal(value: any): string {
     return JSON.stringify(value);
   }
 
-  Unmarshal(text: string): any {
+  unmarshal(text: string): any {
     return destr(text);
   }
 }

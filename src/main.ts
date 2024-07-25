@@ -1,22 +1,23 @@
 import { createApp, ref } from "vue";
-import { setupI18n } from "./locales";
+import { setupI18n } from "./locals";
 import { setupRouter } from "./router";
 import { setupStore } from "./store";
-import { globalConfig } from "./config";
+import { SYSTEM_SETTING } from "./setting";
 
 import "./styles";
 
+import { useAppStore } from "./store/modules/app";
 import App from "~/App.vue";
 
 const app = createApp(App);
 
-void Promise.all([
+// Configure store
+setupStore(app, SYSTEM_SETTING);
+// After setupStore
+const appStore = useAppStore();
 
-  setupStore(app, globalConfig),
+await setupI18n(app, SYSTEM_SETTING, appStore.getUserSetting());
 
-  setupI18n(app, globalConfig),
+setupRouter(app);
 
-  setupRouter(app),
-]).finally(() => {
-  app.mount("#app");
-});
+app.mount("#app");

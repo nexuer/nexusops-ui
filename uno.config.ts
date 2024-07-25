@@ -4,6 +4,27 @@ import {
   presetUno,
 } from "unocss";
 
+/** Create color palette vars */
+function createColorPaletteVars() {
+  const colors: App.Theme.ThemeColorKey[] = ["primary", "info", "success", "warning", "error"];
+  const colorPaletteNumbers: App.Theme.ColorPaletteNumber[] = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+
+  const colorPaletteVar = {} as App.Theme.ThemePaletteColor;
+
+  colors.forEach((color) => {
+    colorPaletteVar[color] = `rgb(var(--${color}-color))`;
+    colorPaletteNumbers.forEach((number) => {
+      colorPaletteVar[`${color}-${number}`] = `rgb(var(--${color}-${number}-color))`;
+    });
+  });
+
+  return colorPaletteVar;
+}
+
+const colorPaletteVars = createColorPaletteVars();
+
+console.log(colorPaletteVars);
+
 export default defineConfig({
   content: {
     pipeline: {
@@ -107,6 +128,20 @@ export default defineConfig({
       error_pressed: "var(--error-color-pressed)",
       error_active: "var(--error-color-active)",
       dark: "#18181c",
+
+      container: "rgb(var(--container-bg-color))",
+      boxShadow: {
+        header: "var(--header-box-shadow)",
+        sider: "var(--sider-box-shadow)",
+        tab: "var(--tab-box-shadow)",
+      },
+    },
+    fontSize: {
+      "icon-xs": "0.875rem",
+      "icon-small": "1rem",
+      "icon": "1.125rem",
+      "icon-large": "1.5rem",
+      "icon-xl": "2rem",
     },
   },
 });

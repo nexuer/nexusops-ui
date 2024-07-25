@@ -115,25 +115,6 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
 
-  packages/nexuer/vite:
-    dependencies:
-      '@nexuer/utils':
-        specifier: workspace:*
-        version: link:../utils
-      pkg-types:
-        specifier: ^1.1.3
-        version: 1.1.3
-      vite:
-        specifier: ^5.3.1
-        version: 5.3.3(@types/node@20.14.10)
-    devDependencies:
-      '@types/node':
-        specifier: ^20.14.5
-        version: 20.14.10
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.5.3)
-
 packages:
 
   '@ampproject/remapping@2.3.0':

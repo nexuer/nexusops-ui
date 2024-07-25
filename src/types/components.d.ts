@@ -7,7 +7,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    NaiveProvider: typeof import('./../components/NaiveProvider/index.vue')['default']
+    DarkModeContainer: typeof import('./../components/DarkModeContainer/index.vue')['default']
+    NaiveUIProvider: typeof import('./../components/NaiveUIProvider/index.vue')['default']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
     NDialogProvider: typeof import('naive-ui')['NDialogProvider']
