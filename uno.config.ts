@@ -4,28 +4,9 @@ import {
   presetUno,
 } from "unocss";
 
-/** Create color palette vars */
-function createColorPaletteVars() {
-  const colors: App.Theme.ThemeColorKey[] = ["primary", "info", "success", "warning", "error"];
-  const colorPaletteNumbers: App.Theme.ColorPaletteNumber[] = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+import type { Theme } from "@unocss/preset-uno";
 
-  const colorPaletteVar = {} as App.Theme.ThemePaletteColor;
-
-  colors.forEach((color) => {
-    colorPaletteVar[color] = `rgb(var(--${color}-color))`;
-    colorPaletteNumbers.forEach((number) => {
-      colorPaletteVar[`${color}-${number}`] = `rgb(var(--${color}-${number}-color))`;
-    });
-  });
-
-  return colorPaletteVar;
-}
-
-const colorPaletteVars = createColorPaletteVars();
-
-console.log(colorPaletteVars);
-
-export default defineConfig({
+export default defineConfig<Theme>({
   content: {
     pipeline: {
       exclude: ["node_modules", ".git", "dist"],

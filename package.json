@@ -32,6 +32,7 @@
     "@kirklin/eslint-config": "^2.5.0",
     "@nexuer/tsconfig": "workspace:*",
     "@unocss/eslint-plugin": "^0.61.3",
+    "@unocss/preset-uno": "^0.61.8",
     "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^9.6.0",
     "naive-ui": "^2.38.2",
