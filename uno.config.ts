@@ -5,6 +5,7 @@ import {
 } from "unocss";
 
 import type { Theme } from "@unocss/preset-uno";
+import { themeCssVars } from "./src/theme/vars";
 
 export default defineConfig<Theme>({
   content: {
@@ -71,52 +72,7 @@ export default defineConfig<Theme>({
     "transition-base": "transition-all duration-300 ease-in-out",
   },
   theme: {
-    colors: {
-      primary: "var(--primary-color)",
-      primary_hover: "var(--primary-color-hover)",
-      primary_suppl: "var(--primary-color-suppl)",
-      primary_pressed: "var(--primary-color-pressed)",
-      primary_active: "var(--primary-color-active)",
-      primary_1: "var(--primary-color-1)",
-      primary_2: "var(--primary-color-2)",
-      primary_3: "var(--primary-color-3)",
-      primary_4: "var(--primary-color-4)",
-      primary_5: "var(--primary-color-5)",
-      primary_6: "var(--primary-color-6)",
-      primary_7: "var(--primary-color-7)",
-      primary_8: "var(--primary-color-8)",
-      primary_9: "var(--primary-color-9)",
-      primary_10: "var(--primary-color-10)",
-      action: "var(--action-color)",
-      info: "var(--info-color)",
-      info_hover: "var(--info-color-hover)",
-      info_suppl: "var(--info-color-suppl)",
-      info_pressed: "var(--info-color-pressed)",
-      info_active: "var(--info-color-active)",
-      success: "var(--success-color)",
-      success_hover: "var(--success-color-hover)",
-      success_suppl: "var(--success-color-suppl)",
-      success_pressed: "var(--success-color-pressed)",
-      success_active: "var(--success-color-active)",
-      warning: "var(--warning-color)",
-      warning_hover: "var(--warning-color-hover)",
-      warning_suppl: "var(--warning-color-suppl)",
-      warning_pressed: "var(--warning-color-pressed)",
-      warning_active: "var(--warning-color-active)",
-      error: "var(--error-color)",
-      error_hover: "var(--error-color-hover)",
-      error_suppl: "var(--error-color-suppl)",
-      error_pressed: "var(--error-color-pressed)",
-      error_active: "var(--error-color-active)",
-      dark: "#18181c",
-
-      container: "rgb(var(--container-bg-color))",
-      boxShadow: {
-        header: "var(--header-box-shadow)",
-        sider: "var(--sider-box-shadow)",
-        tab: "var(--tab-box-shadow)",
-      },
-    },
+    ...themeCssVars,
     fontSize: {
       "icon-xs": "0.875rem",
       "icon-small": "1rem",

@@ -36,4 +36,9 @@ declare namespace Theme {
     [key in ColorKey | `${ColorKey}-${ColorScaleKey}`]: string;
   };
 
+  interface CssVars {
+    colors?: Colors & { [key: string]: string };
+    boxShadow?: { [key: string]: string };
+  }
+
 }

@@ -16,6 +16,10 @@ function createColorVars() {
 
 const colorVars = createColorVars();
 
-export const themeVars = {
-    
-}
+console.log(colorVars);
+
+export const themeCssVars: Theme.CssVars = {
+  colors: {
+    ...colorVars,
+  },
+};
